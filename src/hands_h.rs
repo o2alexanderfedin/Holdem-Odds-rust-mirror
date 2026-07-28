@@ -1,5 +1,7 @@
 use super::*;
 
+pub const HAND_LENGTH: i32 = 5;
+
 pub(crate) const InvalidHand: u32 = 0;
 
 pub(crate) const HighCard: u32 = 1;

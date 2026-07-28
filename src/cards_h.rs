@@ -48,3 +48,7 @@ pub(crate) struct Card {
     pub(crate) rank: Rank,
     pub(crate) suit: Suit,
 }
+
+pub const RANKS_PER_DECK: i32 = 13;
+
+pub const SUITS_PER_DECK: i32 = 4;
