@@ -43,7 +43,7 @@ pub(crate) const Ace: u32 = 13;
 pub(crate) type Rank = u32;
 
 #[repr(C)]
-#[derive(Copy, Clone)]
+#[derive(Copy, Clone, Default)]
 pub(crate) struct Card {
     pub(crate) rank: Rank,
     pub(crate) suit: Suit,

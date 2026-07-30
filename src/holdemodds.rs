@@ -40,11 +40,7 @@ pub(crate) extern "C" fn __main_inner(argc: i32, argv: *const *mut i8) -> Result
                     new_card_from_string(unsafe { *argv.add(i.wrapping_add(1 as u64) as usize) });
                 break '__c8;
             }
-            {
-                let __p = &mut i;
-                *__p = (*__p).wrapping_add(1);
-                *__p
-            };
+            i = i.wrapping_add(1);
         }
     }
     unsafe {
@@ -77,11 +73,7 @@ pub(crate) extern "C" fn __main_inner(argc: i32, argv: *const *mut i8) -> Result
                             hand2[(2 as u64).wrapping_add(j) as usize] = deck[j as usize];
                             break '__c10;
                         }
-                        {
-                            let __p = &mut j;
-                            *__p = (*__p).wrapping_add(1);
-                            *__p
-                        };
+                        j = j.wrapping_add(1);
                     }
                 }
                 hand_sort(&raw mut hand1[0 as usize] as *mut Card);
@@ -114,11 +106,7 @@ pub(crate) extern "C" fn __main_inner(argc: i32, argv: *const *mut i8) -> Result
                 }
                 break '__c9;
             }
-            {
-                let __p = &mut i;
-                *__p = (*__p).wrapping_add(1);
-                *__p
-            };
+            i = i.wrapping_add(1);
         }
     }
     unsafe {

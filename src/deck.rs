@@ -16,11 +16,7 @@ pub(crate) extern "C" fn deck_shuffle(deck: *mut Card, n: u64, deck_size: u64) -
                 });
                 break '__c1;
             }
-            {
-                let __p = &mut i;
-                *__p = (*__p).wrapping_add(1);
-                *__p
-            };
+            i = i.wrapping_add(1);
         }
     }
 }

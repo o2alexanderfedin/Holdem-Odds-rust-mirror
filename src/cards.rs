@@ -14,11 +14,7 @@ pub(crate) extern "C" fn index_of(c: i8, chars: *const i8, n: u64) -> u64 {
                 }
                 break '__c0;
             }
-            {
-                let __p = &mut i;
-                *__p = (*__p).wrapping_add(1);
-                *__p
-            };
+            i = i.wrapping_add(1);
         }
     }
     return 0 as u64;

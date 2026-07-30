@@ -23,11 +23,7 @@ extern "C" fn hand_is_flush(cards: *const Card) -> bool {
                 }
                 break '__c2;
             }
-            {
-                let __p = &mut i;
-                *__p = (*__p).wrapping_add(1);
-                *__p
-            };
+            i = i.wrapping_add(1);
         }
     }
     return 1;
@@ -124,11 +120,7 @@ pub(crate) extern "C" fn hand_compare(hand1: *mut Card, hand2: *mut Card) -> i32
                 }
                 break '__c3;
             }
-            {
-                let __p = &mut i;
-                *__p = (*__p).wrapping_add(1);
-                *__p
-            };
+            i = i.wrapping_add(1);
         }
     }
     return 0;
@@ -150,11 +142,7 @@ pub(crate) extern "C" fn hand_sort(hand: *mut Card) -> () {
                 });
                 break '__c4;
             }
-            {
-                let __p = &mut i;
-                *__p = (*__p).wrapping_add(1);
-                *__p
-            };
+            i = i.wrapping_add(1);
         }
     }
     let mut index: u64 = 0 as u64;
@@ -191,20 +179,12 @@ pub(crate) extern "C" fn hand_sort(hand: *mut Card) -> () {
                             }
                             break '__c6;
                         }
-                        {
-                            let __p = &mut j;
-                            *__p = (*__p).wrapping_sub(1);
-                            *__p
-                        };
+                        j = j.wrapping_sub(1);
                     }
                 }
                 break '__c5;
             }
-            {
-                let __p = &mut count;
-                *__p = (*__p).wrapping_sub(1);
-                *__p
-            };
+            count = count.wrapping_sub(1);
         }
     }
 }
@@ -222,11 +202,7 @@ pub(crate) extern "C" fn hand_is_valid(cards: *const Card) -> bool {
                 }
                 break '__c7;
             }
-            {
-                let __p = &mut i;
-                *__p = (*__p).wrapping_add(1);
-                *__p
-            };
+            i = i.wrapping_add(1);
         }
     }
     return 1;
